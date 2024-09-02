@@ -1,5 +1,5 @@
 {
-  "name": "blue-bar",
+  "name": "msu-secs-website",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -7,11 +7,16 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "test": "npx playwright test",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.15.2",
     "@astrojs/check": "^0.9.3",
+    "astro": "^4.15.2",
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.5.2"
   }
 }
