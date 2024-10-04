@@ -1,0 +1,191 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1d1d20; /* Dark minimalist background */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal overflow only */
+}
+
+/* Main container */
+.main {
+    height: 100vh;
+    width: 100vw;
+    padding: 120px 40px 40px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* SECS logo above text */
+.logo-above {
+    position: absolute;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.secs-logo-above {
+    width: 120px;
+    height: auto;
+}
+
+/* Gradient text for main heading */
+.gradient-text {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #434ae4, #8906E6, #FF00E2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 10;
+}
+
+/* Background Beams */
+.background-beams {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* Ensure beams are behind the content */
+}
+
+@keyframes move-beams {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(200%);
+        opacity: 1;
+    }
+}
+
+.beam {
+    position: absolute;
+    width: 2px;
+    height: 50vh;
+    background: linear-gradient(to bottom, #151BB3, #8906E6, #FF00E2);
+    opacity: 0;
+    animation: move-beams 2.7s linear infinite;
+    animation-fill-mode: backwards;
+}
+
+.beam-1 { left: 15%; animation-delay: 0s; }
+.beam-2 { left: 35%; animation-delay: 1s; }
+.beam-3 { left: 65%; animation-delay: 0.7s; }
+.beam-4 { left: 85%; animation-delay: 1.5s; }
+
+/* About section styles */
+.about-section {
+    background-color: #26262b;
+    padding: 60px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    color: #bbbbbb;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Connect with Us section */
+.connect-section {
+    background-color: #26262b;
+    padding: 40px;
+    text-align: center;
+}
+
+.connect-section h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn i {
+    margin-right: 10px;
+}
+
+/* Instagram Button */
+.social-btn.instagram {
+    background-color: #E4405F;
+}
+.social-btn.instagram:hover {
+    background-color: #D62957;
+}
+
+/* Discord Button */
+.social-btn.discord {
+    background-color: #5865F2;
+}
+.social-btn.discord:hover {
+    background-color: #4859e0;
+}
+
+/* GitHub Button */
+.social-btn.github {
+    background-color: #333;
+}
+.social-btn.github:hover {
+    background-color: #24292E;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .secs-logo-above { width: 80px; }
+
+    .gradient-text { font-size: 2.5rem; }
+
+    .beam { width: 2px; height: 40vh; }
+
+    .about-section { padding: 20px; }
+
+    .about-section h2 { font-size: 2rem; }
+
+    .about-section p { font-size: 1rem; max-width: 90%; }
+
+    .connect-section h2 { font-size: 2rem; }
+
+    .social-buttons { flex-direction: column; gap: 10px; }
+
+    .social-btn { padding: 8px 16px; font-size: 1rem; }
+}
