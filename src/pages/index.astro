@@ -1,9 +1,76 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Navbar from './navbar.astro'; // Import the Navbar component
+import Image from 'astro/components/Image.astro';
+
 ---
 
-<Layout title="Home - SECS">
-	<main>
-		<h1 style="color: whitesmoke;">Software Engineering & Computing Society</h1>
-	</main>
-</Layout>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SECS Landing Page</title>
+  <link rel="stylesheet" href="/styles/landing.css" />
+  <link rel="stylesheet" href="/styles/fontawesome-free-6.6.0-web/css/all.min.css">
+</head>
+
+<body>
+
+<Navbar />
+
+<!-- Main container-->
+<div class="main">
+  <!-- SECS logo above text -->
+  <div class="logo-above">
+    <Image
+        src="/secs.png"
+        alt="SECS Logo"
+        class="secs-logo-above"
+        width={120}
+        height={120}
+        formats={['webp', 'png']}
+        loading="eager"
+    />
+  </div>
+
+  <!-- Main heading text -->
+  <div class="gradient-text">
+    Software Engineering <br /> & <br /> Computing Society
+  </div>
+  <!-- Background Beams -->
+  <div class="background-beams">
+    <div class="beam beam-1"></div>
+    <div class="beam beam-2"></div>
+    <div class="beam beam-3"></div>
+    <div class="beam beam-4"></div>
+  </div>
+</div>
+
+<!-- About Section -->
+<div class="about-section">
+  <h2>About SECS</h2>
+  <p>Welcome to the Software Engineering & Computing Society! Our mission is to ...</p>
+</div>
+
+<!-- Connect with Us Section -->
+<div class="connect-section">
+  <h2>Connect with Us</h2>
+  <div class="social-buttons">
+    <!-- Instagram Button -->
+    <a href="https://www.instagram.com/msusecs" class="social-btn instagram" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <!-- Discord Button -->
+    <a href="https://discord.gg/M5Pz5N2Xzk" class="social-btn discord" target="_blank">
+      <i class="fab fa-discord"></i> Discord
+    </a>
+    <!-- GitHub Button -->
+    <a href="https://github.com/MSU-SECS" class="social-btn github" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</div>
+
+
+</body>
+
+</html>

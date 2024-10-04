@@ -1,0 +1,41 @@
+---
+import Image from 'astro/components/Image.astro';
+---
+
+<div class="navbar">
+    <!-- Left side: Logo and Links -->
+    <div class="navbar-left">
+        <div class="navbar-logo">
+            <a href="/">
+                <Image
+                        src="/secs.png"
+                        alt="SECS Logo"
+                        class="secs-logo-above"
+                        width={120}
+                        height={120}
+                        formats={['webp', 'png']}
+                        loading="eager"
+                />
+            </a>
+        </div>
+        <!-- Hamburger menu icon for mobile -->
+        <button id="navbar-toggle" class="navbar-toggle">
+            &#9776;
+        </button>
+        <!-- Links -->
+        <div class="navbar-links" id="navbar-links">
+            <a href="/projects" class="nav-link">Projects</a>
+            <a href="/events" class="nav-link">Events</a>
+            <a href="/workshops" class="nav-link">Workshops</a>
+        </div>
+    </div>
+    <!-- Right side: Sign-Up button -->
+    <div class="navbar-right">
+        <button class="navbar-signup">Join Us</button>
+    </div>
+</div>
+
+
+
+<link rel="stylesheet" href="/styles/navbar.css">
+<script src="/scripts/navbar.js" is:inline></script>
