@@ -50,3 +50,5 @@ examples/**/env.d.ts
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+styles/fontawesome-free-6.6.0-web/
+
